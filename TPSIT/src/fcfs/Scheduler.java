@@ -27,6 +27,7 @@ public class Scheduler {
 		tExe[3]=6;
 
 		//PROVA GIT HUBBBBBBBBBBBBBBBBBBBBBBBBBBBBB+++++++++
+		//_________------------
 		for(int i=0; i<4;i++) {
 			System.out.println(processo[i]);
 			System.out.println(tArrivo[i]);
