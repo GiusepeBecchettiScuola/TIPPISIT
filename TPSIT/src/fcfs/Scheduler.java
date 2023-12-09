@@ -26,22 +26,24 @@ public class Scheduler {
 		tExe[2]=8;
 		tExe[3]=6;
 
-		//PROVA GIT HUBBBBBBBBBBBBBBBBBBBBBBBBBBBBB+++++++++
-		//_________------------
+		//Printa nella console i processi e i relativi tempi di arrivo ed esecuzione
 		for(int i=0; i<4;i++) {
 			System.out.println(processo[i]);
 			System.out.println(tArrivo[i]);
 			System.out.println(tExe[i]);
-
+			//Controllo se un processo ha come tempo di arrivo 0, in tal caso imposto
+			//il tempo di servizio e di attesa a 0
 			if(tArrivo[i]==0) {
 				tServizio[i]=0;
 				tAttesa[i]=0;
-
+			//Se il tempo di arrivo è diverso da 0 vado ad eseguire il calcolo del
+			//tempo di servizio, di attesa e la media totale dei tempi di attesa
 			}else {
 				tServizio[i]=tServizio[i-1]+tExe[i-1];
 				tAttesa[i]=tServizio[i]-tArrivo[i];
 				media= media+tAttesa[i]/4;
 			}
+			//Stampo nella console i tempi di servizio di attesa e la media totale
 			System.out.println(tServizio[i]);
 			System.out.println(tAttesa[i]);
 			System.out.println(media);

@@ -1,4 +1,4 @@
-package it.edu.iisgubbio.tpsit;
+package tpsit;
 
 public class Operazioni {
 

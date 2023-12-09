@@ -1,4 +1,4 @@
-package it.edu.iisgubbio.tpsit;
+package tpsit;
 
 
 import javafx.application.Application;
@@ -7,12 +7,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Holt extends Application {
+public class Holt extends Grafi {
 
 	int risorse;
 	int processi;
 	int grafo;
-
 	public  Holt(int a, int b) {
 
 		risorse = a;
@@ -24,31 +23,26 @@ public class Holt extends Application {
 				System.out.println();
 			}
 		}
+	}
 
-
-		public void richiesta(int a, int b) {
-			if(this.grafo[process][resources]==0) {
-				if (this.checkcolum(resources)) {
-					this.grafo
-				}
+	public void richiesta(int a, int b) {
+		if(this.grafo==0) {
+			if (this.checkcolum(risorse)) {
+				this.grafo
 			}
 		}
-		
-		
-
+	}
 	public void start(Stage primaryStage) {
 
 		public 	Boolean checkcolum(int resources) {
 			int somma=0;
 			for (int i=o; i< this.dimension;i++) {
 				somma=somma + this.grafo[i][resources];
-				
+
 			}
-		if ( somma==0) {
-			return(true);
-				
-		}
-		
+			if ( somma==0) {
+				return(true);
+			}
 		}
 	}
 
