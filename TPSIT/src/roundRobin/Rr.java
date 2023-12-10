@@ -42,7 +42,7 @@ public class Rr {
 				tExeRim=tExe[i]-3;
 				tExe[i]=tExeRim;
 			}
-
+//----------------------------------------------------------------
 			System.out.println("Processo: " + processo[i]);
 			System.out.println("Tempo di arrivo: " + tArrivo[i]);
 			System.out.println("Tempo di Esecuzione: " + tExe[i]);
