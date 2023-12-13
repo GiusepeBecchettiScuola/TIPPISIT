@@ -31,9 +31,10 @@ public class Rr {
 		tExeRim[1] = 3;
 		tExeRim[2] = 8;
 		tExeRim[3] = 6;
+		
 		System.out.println("Quanto di tempo: " + qT);
 		for (int i = 0; i < 4; i++) {
-
+			
 			if (tArrivo[i] == 0) {
 				tServizio[0] = 0;
 				tAttesa[0] = 0;
@@ -44,8 +45,6 @@ public class Rr {
 				tExeRim[i] = tExe[i] - qT;
 				tExe[i] = tExeRim[i];
 			}
-
-
 			//----------------------------------------------------------------------------------------------------------------
 			System.out.println("Processo: " + processo[i]);
 			System.out.println("Tempo di arrivo: " + tArrivo[i]);
