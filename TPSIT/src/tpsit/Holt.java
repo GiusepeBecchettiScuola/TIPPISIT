@@ -1,54 +1,30 @@
 package tpsit;
 
-
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
-public class Holt extends Grafi {
-
-	int risorse;
-	int processi;
-	int grafo;
-	public  Holt(int a, int b) {
-
-		risorse = a;
-		processi = b;
-		int matrice[][]= new int [a][b];
-		for(int i=0;i>matrice.length;i++) {
-			for(int j=0; j>matrice.length;j++) {
-				matrice[i][j]=0;
-				System.out.println();
+public class Holt {
+	int processi,risorse;
+	int grafo[][];
+	public Holt(int x, int y) {
+		risorse=x;
+		processi=y;
+		grafo = new int[x][y];
+		for(int i=0;i<x;i++) {
+			for(int c=0;c<y;c++) {
+				grafo[i][c]=0;
 			}
 		}
 	}
-
-	public void richiesta(int a, int b) {
-		if(this.grafo==0) {
-			if (this.checkcolum(risorse)) {
-				this.grafo
+	public void in (int processo, int risorsa) {
+		boolean preso=false;
+		for(int i=0;i<processi;i++) {
+			if(grafo[risorsa][i]==1) {
+				preso=true;			
 			}
 		}
-	}
-	public void start(Stage primaryStage) {
-
-		public 	Boolean checkcolum(int resources) {
-			int somma=0;
-			for (int i=o; i< this.dimension;i++) {
-				somma=somma + this.grafo[i][resources];
-
-			}
-			if ( somma==0) {
-				return(true);
-			}
+		if(preso) {
+			grafo[risorsa][processo]=2;
+		}else {
+			grafo[risorsa][processo]=1;
 		}
-	}
-
-
-
-	public static void main(String[] args) {
-		launch(args);
+		
 	}
 }

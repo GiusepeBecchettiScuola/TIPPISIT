@@ -52,7 +52,7 @@ public class Rr {
 			System.out.println("Tempo di servizio: " + tServizio[i]);
 			System.out.println("Tempo di attesa: " + tAttesa[i]);
 		}	
-		System.out.println("Media tempi di attesa: " + media/4);
+		System.out.println("Media tempi di attesa: " + media);
 
 	}    
 }
