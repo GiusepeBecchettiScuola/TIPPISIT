@@ -27,17 +27,17 @@ public class Video {
 				if (durataVideo[posizione] > durataVideo[posizione + 1]) {
 
 					// Scambio delle informazioni tra i video
-					int appoggioExe = tempoAschermoTot[posizione];
+					int appoggioTast = tempoAschermoTot[posizione];
 					tempoAschermoTot[posizione] = tempoAschermoTot[posizione + 1];
-					tempoAschermoTot[posizione + 1] = appoggioExe;
+					tempoAschermoTot[posizione + 1] = appoggioTast;
 
-					String appoggioPro = idVideo[posizione];
+					String appoggioId = idVideo[posizione];
 					idVideo[posizione] = idVideo[posizione + 1];
-					idVideo[posizione + 1] = appoggioPro;
+					idVideo[posizione + 1] = appoggioId;
 
-					int appoggioArrivo = durataVideo[posizione];
+					int appoggioDurata = durataVideo[posizione];
 					durataVideo[posizione] = durataVideo[posizione + 1];
-					durataVideo[posizione + 1] = appoggioArrivo;
+					durataVideo[posizione + 1] = appoggioDurata;
 				}
 			}
 		}
